@@ -33,7 +33,16 @@
         </div>
         <label for="length">Password length:</label>
          <input id="length" type="number" min="8" x-model="length">
-        <button type="submit" x-on:click.prevent="generatePassword()">Generate password</button>
+       <div class=flex>
+    <p>
+      Password strength:
+      <strong
+        x-text="getPasswordStrength()"
+        class="text-blue-500"
+        x-bind:class="{ 'text-green-500': getPasswordStrength() === 'strong', 'text-red-500': getPasswordStrength() === 'weak' }"
+      ></strong>
+    </p>
+  </div>
         
       </form>
 
