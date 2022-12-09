@@ -20,7 +20,7 @@ Install laravel/notification channels message bird package
    After performing the action perform the assertion.
    
    ```php
-   function driver_receives_a_sms_message_when_a_collection_request_is_created_for_the_day()
+   function test_order_notification_is_sent()
     {
     
       protected function setUp(): void
